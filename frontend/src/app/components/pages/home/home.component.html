@@ -1,0 +1,38 @@
+<ul>
+  <li *ngFor="let phones of phone">
+    <a routerLink="/phones/{{phones.id}}">
+      <img [src]= "phones.imageUrl" [alt] = "phones.name"/>
+      <div class="content">
+        <div class="name">
+            {{phones.name}}
+        </div>
+        <span class="favourite {{phones.favourite?'':'not'}}">
+          &#10084;
+        </span>
+        <div class="stars">
+          <star-rating
+          [value]="phones.stars"
+          [totalstars]="5"
+          checkedcolor="red"
+          uncheckedcolor="black"
+          size="22px"
+          [readonly]="true">
+        </star-rating>
+        </div>
+        <div class="product-item-footer">
+          <div class="origins">
+            <span *ngFor="let origin of phones.origins in phones.origins">
+              {{origin}}
+            </span>
+          </div>
+        </div>
+
+        <div class="price">
+          <span>
+            {{phones.price | currency}}
+          </span>
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>
