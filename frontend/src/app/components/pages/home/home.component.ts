@@ -9,13 +9,15 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  phone:Phones[] = [];
+  phones:Phones[] = [];
   constructor(private phoneservice:SmartphonesService, activatedRoute:ActivatedRoute) {
     activatedRoute.params.subscribe((params)=> {
       if (params.searchTerm)
-        this.phone = this.phoneservice.getAllPhonesBySearchTerm(params.searchTerm);
+        this.phones = this.phoneservice.getAllPhonesBySearchTerm(params.searchTerm);
+      else if (params.tag)
+        this.phones = this.phoneservice.getAllPhonesByTag(params.tag);
       else
-        this.phone = phoneservice.getAll()
+        this.phones = phoneservice.getAll()
     })
 
   }

@@ -7,6 +7,8 @@ import { HeaderComponent } from './components/partials/header/header.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { RatingModule } from 'ng-starrating';
 import { SearchComponent } from './components/partials/search/search.component';
+import { PhonePageComponent } from './components/pages/phone-page/phone-page.component';
+import { TagsComponent } from './components/partials/tags/tags.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { SearchComponent } from './components/partials/search/search.component';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    SearchComponent
+    SearchComponent,
+    PhonePageComponent,
+    TagsComponent
   ],
   imports: [
     BrowserModule,

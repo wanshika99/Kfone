@@ -1,18 +1,19 @@
 <app-search></app-search>
+<app-tags></app-tags>
 <ul>
-  <li *ngFor="let phones of phone">
-    <a routerLink="/phones/{{phones.id}}">
-      <img [src]= "phones.imageUrl" [alt] = "phones.name"/>
+  <li *ngFor="let phone of phones">
+    <a routerLink="/phones/{{phone.id}}">
+      <img [src]= "phone.imageUrl" [alt] = "phone.name"/>
       <div class="content">
         <div class="name">
-            {{phones.name}}
+            {{phone.name}}
         </div>
-        <span class="favourite {{phones.favourite?'':'not'}}">
+        <span class="favourite {{phone.favourite?'':'not'}}">
           &#10084;
         </span>
         <div class="stars">
           <star-rating
-          [value]="phones.stars"
+          [value]="phone.stars"
           [totalstars]="5"
           checkedcolor="red"
           uncheckedcolor="black"
@@ -22,7 +23,7 @@
         </div>
         <div class="product-item-footer">
           <div class="origins">
-            <span *ngFor="let origin of phones.origins in phones.origins">
+            <span *ngFor="let origin of phone.origins in phones.origins">
               {{origin}}
             </span>
           </div>
@@ -30,7 +31,7 @@
 
         <div class="price">
           <span>
-            {{phones.price | currency}}
+            {{phone.price | currency}}
           </span>
         </div>
       </div>

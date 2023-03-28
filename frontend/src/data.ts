@@ -1,4 +1,5 @@
 import {Phones} from "./app/shared/models/phones";
+import { Tag } from "./app/shared/Tags";
 
 export const sample_phones: Phones[] = [
   {
@@ -15,7 +16,7 @@ export const sample_phones: Phones[] = [
     id: '2',
     name: 'Samsung S22 ultra',
     price: 930,
-    tags: ['Samsung','5G','8GB RAM'],
+    tags: ['Samsung','5G','RAM'],
     favourite: false,
     stars: 3.0,
     imageUrl: 'assets/s22.jpg',
@@ -25,7 +26,7 @@ export const sample_phones: Phones[] = [
     id: '3',
     name: 'Samsung Z fold2',
     price: 450,
-    tags: ['Samsung','5G','12GB RAM'],
+    tags: ['Samsung','5G','Fold'],
     favourite: true,
     stars: 3.0,
     imageUrl: 'assets/s21.jpg',
@@ -35,7 +36,7 @@ export const sample_phones: Phones[] = [
     id: '4',
     name: 'Samsung Galaxy Note10',
     price: 350,
-    tags: ['Samsung','5G','Note'],
+    tags: ['Samsung','Note','Galaxy'],
     favourite: false,
     stars: 3.0,
     imageUrl: 'assets/note10.jpg',
@@ -45,7 +46,7 @@ export const sample_phones: Phones[] = [
     id: '5',
     name: 'Samsung Galaxy Note20 Ultra',
     price: 430,
-    tags: ['Samsung','5G','Note'],
+    tags: ['Samsung','Note','Galaxy'],
     favourite: true,
     stars: 2.0,
     imageUrl: 'assets/note20.jpg',
@@ -55,7 +56,7 @@ export const sample_phones: Phones[] = [
     id: '6',
     name: 'Samsung Galaxy Note22 Ultra',
     price: 920,
-    tags: ['Samsung','5G','Note'],
+    tags: ['Samsung','5G','Note','Galaxy'],
     favourite: false,
     stars: 5.0,
     imageUrl: 'assets/note22.jpg',
@@ -63,3 +64,13 @@ export const sample_phones: Phones[] = [
   },
 ]
 
+export const sample_tags:Tag[] = [
+  {name:'All',count:6},
+  {name:'Samsung',count:6},
+  {name:'5G',count:4},
+  {name:'Note',count:3},
+  {name:'RAM',count:1},
+  {name:'Fold',count:1},
+  {name:'Galaxy',count:3},
+
+]
