@@ -13,4 +13,8 @@ export class SmartphonesService {
   getAll():Phones[] {
     return sample_phones;
   }
+  getAllPhonesBySearchTerm(searchTerm:string){
+    return this.getAll().filter(Phones => Phones.name.toLowerCase().includes(searchTerm.toLowerCase()));
+
+  }
 }
